@@ -36,7 +36,7 @@ public class JpaConfiguration {
     @Autowired
     private Environment environment;
     
-    @Value("${datasource.serviziDipendenti.maxPoolSize:10}")
+    @Value("${datasource.servizidipendenti.maxPoolSize:10}")
     private int maxPoolSize;    
     
     /*
@@ -46,7 +46,7 @@ public class JpaConfiguration {
      */
     @Bean
     @Primary
-    @ConfigurationProperties(prefix = "datasource.serviziDipendenti")
+    @ConfigurationProperties(prefix = "datasource.servizidipendenti")
     public DataSourceProperties dataSourceProperties(){
         return new DataSourceProperties();
     }    
@@ -100,13 +100,13 @@ public class JpaConfiguration {
      */
     private Properties jpaProperties() {
         Properties properties = new Properties();
-        properties.put("hibernate.dialect", environment.getRequiredProperty("datasource.serviziDipendenti.hibernate.dialect"));
-        properties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("datasource.serviziDipendenti.hibernate.hbm2ddl.method"));
-        properties.put("hibernate.show_sql", environment.getRequiredProperty("datasource.serviziDipendenti.hibernate.show_sql"));
-        properties.put("hibernate.format_sql", environment.getRequiredProperty("datasource.serviziDipendenti.hibernate.format_sql"));
+        properties.put("hibernate.dialect", environment.getRequiredProperty("datasource.servizidipendenti.hibernate.dialect"));
+        properties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("datasource.servizidipendenti.hibernate.hbm2ddl.method"));
+        properties.put("hibernate.show_sql", environment.getRequiredProperty("datasource.servizidipendenti.hibernate.show_sql"));
+        properties.put("hibernate.format_sql", environment.getRequiredProperty("datasource.servizidipendenti.hibernate.format_sql"));
         
-        if(StringUtils.isNotEmpty(environment.getRequiredProperty("datasource.serviziDipendenti.defaultSchema"))){
-            properties.put("hibernate.default_schema", environment.getRequiredProperty("datasource.serviziDipendenti.defaultSchema"));
+        if(StringUtils.isNotEmpty(environment.getRequiredProperty("datasource.servizidipendenti.defaultSchema"))){
+            properties.put("hibernate.default_schema", environment.getRequiredProperty("datasource.servizidipendenti.defaultSchema"));
         }
         return properties;
     }  

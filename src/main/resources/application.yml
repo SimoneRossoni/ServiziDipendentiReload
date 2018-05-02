@@ -5,7 +5,7 @@ server:
 spring:
   profiles: svil,default
 datasource:
-  serviziDipendenti:
+  servizidipendenti:
     url: jdbc:mysql://localhost:3306/servizidipendenti
     username: root
     password: administrator
