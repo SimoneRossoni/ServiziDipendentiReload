@@ -14,4 +14,4 @@
      Cliccare sul tasto Next
   5) Nell'ultima schermata cliccare solo sul tasto finish
   6) Il progetto viene scaricato ma deve essere convertito in un progetto Maven
-     Quindi tadto destro sul progetto -> configure -> Convert to Maven Project
+     Quindi tasto destro sul progetto -> configure -> Convert to Maven Project...
