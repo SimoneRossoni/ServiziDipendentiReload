@@ -1,4 +1,4 @@
-package it.eng.comuneroma.ServiziDipendentiReload.util;
+package it.eng.comuneroma.serviziDipendentiReload.util;
 
 public class CustomErrorType {
     private String errorMessage;

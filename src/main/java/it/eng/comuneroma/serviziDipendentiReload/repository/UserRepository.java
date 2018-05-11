@@ -1,10 +1,10 @@
-package it.eng.comuneroma.ServiziDipendentiReload.repository;
+package it.eng.comuneroma.serviziDipendentiReload.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import it.eng.comuneroma.ServiziDipendentiReload.entity.User;
+import it.eng.comuneroma.serviziDipendentiReload.entity.User;
  
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {

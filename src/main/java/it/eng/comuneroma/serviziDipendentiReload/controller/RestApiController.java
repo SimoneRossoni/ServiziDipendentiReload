@@ -1,4 +1,4 @@
-package it.eng.comuneroma.ServiziDipendentiReload.controller;
+package it.eng.comuneroma.serviziDipendentiReload.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import it.eng.comuneroma.ServiziDipendentiReload.entity.User;
-import it.eng.comuneroma.ServiziDipendentiReload.service.UserService;
-import it.eng.comuneroma.ServiziDipendentiReload.util.CustomErrorType;
+import it.eng.comuneroma.serviziDipendentiReload.entity.User;
+import it.eng.comuneroma.serviziDipendentiReload.service.UserService;
+import it.eng.comuneroma.serviziDipendentiReload.util.CustomErrorType;
 
 @RestController
 @RequestMapping("/api")

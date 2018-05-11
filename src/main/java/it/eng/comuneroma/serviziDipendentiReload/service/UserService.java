@@ -1,10 +1,10 @@
-package it.eng.comuneroma.ServiziDipendentiReload.service;
+package it.eng.comuneroma.serviziDipendentiReload.service;
 
 
 import java.util.List;
 import java.util.Optional;
 
-import it.eng.comuneroma.ServiziDipendentiReload.entity.User;
+import it.eng.comuneroma.serviziDipendentiReload.entity.User;
  
 public interface UserService {
      

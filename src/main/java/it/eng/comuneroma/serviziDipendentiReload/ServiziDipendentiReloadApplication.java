@@ -1,4 +1,4 @@
-package it.eng.comuneroma.ServiziDipendentiReload;
+package it.eng.comuneroma.serviziDipendentiReload;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 
-import it.eng.comuneroma.ServiziDipendentiReload.entity.Customer;
-import it.eng.comuneroma.ServiziDipendentiReload.repository.CustomerRepository;
+import it.eng.comuneroma.serviziDipendentiReload.entity.Customer;
+import it.eng.comuneroma.serviziDipendentiReload.repository.CustomerRepository;
 
 import java.util.List;
 import java.util.stream.Stream;

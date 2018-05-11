@@ -1,4 +1,4 @@
-package it.eng.comuneroma.ServiziDipendentiReload.configuration;
+package it.eng.comuneroma.serviziDipendentiReload.configuration;
 
 
 import java.util.Properties;
@@ -28,7 +28,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "it.eng.comuneroma.ServiziDipendentiReload.repository",
+@EnableJpaRepositories(basePackages = "it.eng.comuneroma.serviziDipendentiReload.repository",
         			   entityManagerFactoryRef = "entityManagerFactory",
         			   transactionManagerRef = "transactionManager")
 @EnableTransactionManagement
@@ -78,7 +78,7 @@ public class JpaConfiguration {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws NamingException {
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         factoryBean.setDataSource(dataSource());
-        factoryBean.setPackagesToScan(new String[] { "it.eng.comuneroma.ServiziDipendentiReload.entity" });
+        factoryBean.setPackagesToScan(new String[] { "it.eng.comuneroma.serviziDipendentiReload.entity" });
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
         factoryBean.setJpaProperties(jpaProperties());
         

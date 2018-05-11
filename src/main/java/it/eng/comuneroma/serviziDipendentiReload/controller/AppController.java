@@ -1,4 +1,4 @@
-package it.eng.comuneroma.ServiziDipendentiReload.controller;
+package it.eng.comuneroma.serviziDipendentiReload.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,9 +10,9 @@ public class AppController {
 
     @RequestMapping("/")
     String home(ModelMap modal) {
-        modal.addAttribute("title","CRUD Example");
+        modal.addAttribute("title","Servizi dipendenti");
         
-        return "index";
+        return "indexServiziDipendentiReloaded";
     }
  
     @RequestMapping("/partials/{page}")

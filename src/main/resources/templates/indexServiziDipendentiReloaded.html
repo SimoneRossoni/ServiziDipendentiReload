@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en" ng-app="serviziDipendentiReloadedApp">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	
+        <title th:text="${title}"></title>
+              
+        <!-- Bootstrap core CSS -->  
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        
+        <!-- ServiziDipendentiReloaded CSS -->
+        <link href="css/appServiziDipendentiReloaded.css" rel="stylesheet"/>
+    </head>
+    
+    <body >
+        <div ui-view></div>
+        
+        <!-- load angularJs -->
+        <script src="js/lib/angular.min.js" ></script>
+        
+        <!-- load uiRouter -->
+        <script src="js/lib/angular-ui-router.min.js" ></script>
+        
+        <!-- load ServiziDipendentiReloaded JS -->               
+        <script src="js/app/appServiziDipendentiReloaded.js"></script>
+        
+        <!--  load AvvisiMVC -->
+        <script src="js/app/avvisi/AvvisiService.js"></script>  
+   		<script src="js/app/avvisi/AvvisiController.js"></script> 
+   		
+   		<!--  load UtilFilter -->
+        <script src="js/app/util/UtilFilter.js"></script> 
+
+    </body>
+</html>

@@ -1,4 +1,4 @@
-package it.eng.comuneroma.ServiziDipendentiReload.controller;
+package it.eng.comuneroma.serviziDipendentiReload.controller;
 
 import java.util.stream.Stream;
 
@@ -10,9 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import it.eng.comuneroma.ServiziDipendentiReload.ServiziDipendentiReloadApplication;
-import it.eng.comuneroma.ServiziDipendentiReload.entity.Customer;
-import it.eng.comuneroma.ServiziDipendentiReload.repository.CustomerRepository;
+import it.eng.comuneroma.serviziDipendentiReload.entity.Customer;
+import it.eng.comuneroma.serviziDipendentiReload.repository.CustomerRepository;
 
 @Controller
 public class HomeController {

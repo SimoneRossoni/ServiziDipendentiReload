@@ -1,13 +1,13 @@
-package it.eng.comuneroma.ServiziDipendentiReload;
+package it.eng.comuneroma.serviziDipendentiReload;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
-import it.eng.comuneroma.ServiziDipendentiReload.configuration.JpaConfiguration;
+import it.eng.comuneroma.serviziDipendentiReload.configuration.JpaConfiguration;
 
+@SpringBootApplication
 @Import(JpaConfiguration.class)
-@SpringBootApplication(scanBasePackages={"it.eng.comuneroma.ServiziDipendentiReload"})
 public class SpringBootCRUDApplication {
 	
     public static void main(String[] args) {

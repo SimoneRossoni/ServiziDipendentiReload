@@ -1,4 +1,4 @@
-package it.eng.comuneroma.ServiziDipendentiReload.service;
+package it.eng.comuneroma.serviziDipendentiReload.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import it.eng.comuneroma.ServiziDipendentiReload.entity.User;
-import it.eng.comuneroma.ServiziDipendentiReload.repository.UserRepository;
+import it.eng.comuneroma.serviziDipendentiReload.entity.User;
+import it.eng.comuneroma.serviziDipendentiReload.repository.UserRepository;
  
  
  

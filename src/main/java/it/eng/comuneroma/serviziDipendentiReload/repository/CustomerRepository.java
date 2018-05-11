@@ -1,4 +1,4 @@
-package it.eng.comuneroma.ServiziDipendentiReload.repository;
+package it.eng.comuneroma.serviziDipendentiReload.repository;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-import it.eng.comuneroma.ServiziDipendentiReload.entity.Customer;
+import it.eng.comuneroma.serviziDipendentiReload.entity.Customer;
 
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
 	List<Customer> findByLastName(String lastName);
