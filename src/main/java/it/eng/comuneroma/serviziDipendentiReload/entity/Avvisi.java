@@ -29,8 +29,6 @@ public class Avvisi {
     @Column(length=10000, name="allegato")
     private byte[] allegato;
     
-    @Column(name = "descizione")
-    private Long descizione;
 
 	public Long getId() {
 		return id;
@@ -71,13 +69,6 @@ public class Avvisi {
 	public void setAllegato(byte[] allegato) {
 		this.allegato = allegato;
 	}
-
-	public Long getDescizione() {
-		return descizione;
-	}
-
-	public void setDescizione(Long descizione) {
-		this.descizione = descizione;
-	}       
+  
         
 }
