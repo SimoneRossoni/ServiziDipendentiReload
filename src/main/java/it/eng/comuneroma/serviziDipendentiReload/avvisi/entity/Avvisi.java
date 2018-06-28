@@ -1,4 +1,4 @@
-package it.eng.comuneroma.serviziDipendentiReload.entity;
+package it.eng.comuneroma.serviziDipendentiReload.avvisi.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -15,3 +15,8 @@ app.config(['$stateProvider', '$urlRouterProvider',
         
         
     }]);
+
+app.config(['$httpProvider', 
+	function($httpProvider) {
+	  $httpProvider.interceptors.push('AuthInterceptor');
+	}]);

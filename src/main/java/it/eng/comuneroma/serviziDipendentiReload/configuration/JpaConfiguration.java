@@ -28,7 +28,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "it.eng.comuneroma.serviziDipendentiReload.repository",
+@EnableJpaRepositories(basePackages = "it.eng.comuneroma.serviziDipendentiReload",
         			   entityManagerFactoryRef = "entityManagerFactory",
         			   transactionManagerRef = "transactionManager")
 @EnableTransactionManagement
@@ -78,7 +78,7 @@ public class JpaConfiguration {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws NamingException {
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         factoryBean.setDataSource(dataSource());
-        factoryBean.setPackagesToScan(new String[] { "it.eng.comuneroma.serviziDipendentiReload.entity" });
+        factoryBean.setPackagesToScan(new String[] { "it.eng.comuneroma.serviziDipendentiReload" });
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
         factoryBean.setJpaProperties(jpaProperties());
         
@@ -101,7 +101,7 @@ public class JpaConfiguration {
     private Properties jpaProperties() {
         Properties properties = new Properties();
         properties.put("hibernate.dialect", environment.getRequiredProperty("datasource.servizidipendenti.hibernate.dialect"));
-        properties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("datasource.servizidipendenti.hibernate.hbm2ddl.method"));
+        //properties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("datasource.servizidipendenti.hibernate.hbm2ddl.method"));
         properties.put("hibernate.show_sql", environment.getRequiredProperty("datasource.servizidipendenti.hibernate.show_sql"));
         properties.put("hibernate.format_sql", environment.getRequiredProperty("datasource.servizidipendenti.hibernate.format_sql"));
         

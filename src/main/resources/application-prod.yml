@@ -1,0 +1,22 @@
+---
+server:
+  port: 8080
+---
+datasource:
+  servizidipendenti:
+    url: jdbc:mysql://localhost:3306/servizidipendenti
+    username: root
+    password: administrator
+    driverClassName: com.mysql.jdbc.Driver
+    defaultSchema:
+    maxPoolSize: 20
+    hibernate:
+      hbm2ddl.method: update
+      show_sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.MySQLDialect     
+---       
+logging:
+  level:
+    org.springframework.web: ERROR
+    it.eng.comuneroma.serviziDipendentiReload: INFO

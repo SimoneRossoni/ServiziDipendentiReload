@@ -1,4 +1,4 @@
-package it.eng.comuneroma.serviziDipendentiReload.controller;
+package it.eng.comuneroma.serviziDipendentiReload.avvisi.controller;
 
 import java.util.List;
 
@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import it.eng.comuneroma.serviziDipendentiReload.entity.Avvisi;
-import it.eng.comuneroma.serviziDipendentiReload.service.AvvisiService;
-import it.eng.comuneroma.serviziDipendentiReload.service.UserService;
+import it.eng.comuneroma.serviziDipendentiReload.avvisi.entity.Avvisi;
+import it.eng.comuneroma.serviziDipendentiReload.avvisi.service.AvvisiService;
 
 @RestController
 @RequestMapping("/avvisi")
@@ -23,18 +22,23 @@ public class RestAvvisiController {
     @Autowired
     AvvisiService avvisiService;	
     
-    @Autowired
-    UserService userService;
+    //@Autowired
+    //UserService userService;
     
     // -------------------Restituisce tutti gli avvisi -------------------------------------------    
     @RequestMapping(value = "/getAll/", method = RequestMethod.GET)
     public ResponseEntity<List<Avvisi>> listAllAvvisi() {
         
+    	logger.debug("chiamata metodo listAllAvvisi - INIZIO");
+    	logger.info("chiamata metodo listAllAvvisi - INIZIO");
+    	
     	List<Avvisi> avvisi = avvisiService.findAllAvvisi();
         
         if (avvisi.isEmpty()) {
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }
+        
+        logger.debug("chiamata metodo listAllAvvisi - FINE");       
         return new ResponseEntity<List<Avvisi>>(avvisi, HttpStatus.OK);
     	
     }   

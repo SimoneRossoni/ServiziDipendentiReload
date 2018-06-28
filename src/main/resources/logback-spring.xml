@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<property name="LOG_FILE" value="/Users/Simone/ServiziDipendentiReload.log"/>
+	
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <springProfile name="svil">
+                <pattern>%d{yy-MMMM-dd HH:mm:ss:SSS} %5p %t %c{2}:%L - %m%n</pattern>
+            </springProfile>
+            <springProfile name="prod">
+                <pattern>%d{yy-MM-dd E HH:mm:ss.SSS} %5p %t %c{2}:%L - %m%n</pattern>
+            </springProfile>        
+        </encoder>
+    </appender>
+    
+    <appender name="ROLLING-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <springProfile name="svil">
+                <pattern>%d{yy-MMMM-dd HH:mm:ss:SSS} %5p %t %c{2}:%L - %m%n</pattern>
+            </springProfile>
+            <springProfile name="prod">
+                <pattern>%d{yy-MM-dd E HH:mm:ss.SSS} %5p %t %c{2}:%L - %m%n</pattern>
+            </springProfile>        
+        </encoder>
+        <file>${LOG_FILE}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+        
+           
+    <springProfile name="svil">
+        <root level="DEBUG">
+            <appender-ref ref="stdout"/>
+            <appender-ref ref="ROLLING-FILE"/>
+        </root>
+        
+    </springProfile>
+    <springProfile name="prod">
+        <root level="INFO">
+            <appender-ref ref="stdout"/>
+            <appender-ref ref="ROLLING-FILE"/>
+        </root>
+                
+    </springProfile>
+</configuration>
